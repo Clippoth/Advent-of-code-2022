@@ -83,7 +83,7 @@ def part1():
 
 def part2():
     score = 0
-    dist = 0
+    iconicScore = 0
     for row in range(1, len(forest)-1):
         for column in range(1, len(forest)-1):
             if column == 0 or column == len(forest)-1 or row == 0 or row == len(forest)-1:
@@ -91,9 +91,9 @@ def part2():
             else:
                 height = forest[row][column]
                 vup, vdown, vleft, vright = vectors(row,column, height)
-                dist = scorecalc(vup,vdown,vleft,vright, height)
-                if dist > score:
-                    score = dist 
+                iconicScore = scorecalc(vup,vdown,vleft,vright, height)
+                if iconicScore > score:
+                    score = iconicScore 
     return score
 
 print("Answer to part 1 is: ", part1())
