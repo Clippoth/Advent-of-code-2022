@@ -1,5 +1,3 @@
-
-import numpy as np
 with open("day 8 input.txt") as fin:
     forest = [[int(i) for i in line.strip()] for line in fin.read().splitlines()]
 
